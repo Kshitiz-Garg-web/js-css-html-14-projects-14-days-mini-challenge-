@@ -1,4 +1,4 @@
-# js-css-html-14-projects-14-days-minni-challenge-
+# js-css-html-14-projects-14-days-mini-challenge-
 
 This repository is dedicated to JavaScript projects aimed at building a strong foundation in JavaScript fundamentals. Just like the previous challenge on HTML and CSS, this repository focuses on core JavaScript concepts through 14 different projects.
 
