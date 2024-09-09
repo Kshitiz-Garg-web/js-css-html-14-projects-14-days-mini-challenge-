@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aliceblue;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 36px;
+    flex-direction: column;
+    font-family:Arial, Helvetica, sans-serif
+   
+}
+
+.heading::after{
+    content: "";
+    height: 32px;
+    color: black;
+}
+
+.container {
+    background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 16px;
+    border-radius: 100%;
+    height: 300px;
+    width: 300px;
+    
+}
+
+.number{
+    margin-top: 0;
+}
+
+.plusminus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nag-btn,
+.pos-btn {
+    background-color:aliceblue;
+    height: 32px;
+    width: 32px;
+    text-align: center;
+    margin-left: 4px;
+    border: 1px solid black;
+    padding-top: 5px;
+    cursor: pointer;
+}
+
+.inde {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.inc-dec-btn {
+    border: 1px solid black;
+    height: 32px;
+    width: 64px;
+    text-align: center;
+    background-color:aliceblue;
+}
+.res {
+    border: 1px solid black;
+    height: 32px;
+    width: 64px;
+    text-align: center;
+    background-color: aliceblue;
+    padding-top: 5px;
+    cursor: pointer;
+}
+
+.pos-btn:hover,.nag-btn:hover,.res:hover,.inc-dec-btn:hover{
+    transform: scale(1.1);
+}
