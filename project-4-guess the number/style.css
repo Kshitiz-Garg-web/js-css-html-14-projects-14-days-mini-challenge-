@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    min-height: 100vh;
+    background-image: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
+    padding-inline: 12px;
+}
+
+.top-heading {
+    text-align: center;
+    border-bottom: 2px solid;
+    padding-bottom: 8px;
+}
+
+.container {
+    background-color: rgb(120, 188, 165);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+.input-feild {
+    height: 32px;
+    width: 175px;
+    font-family: inherit;
+}
+
+.btns {
+    margin-left: 4px;
+    padding: 12px;
+}
+
+.btn {
+    background-color: rgb(27, 255, 255);
+    border: none;
+    color: rgb(37, 36, 36);
+    padding: 4px 8px;
+    font-family: inherit;
+}
+
+.btn:focus {
+    transform: scale(.9);
+    background-color: rgb(98, 132, 132);
+}
+
+.submit-btn {
+    cursor: pointer;
+}
+
+.start-game-btn {
+    cursor: not-allowed;
+    filter: blur(.8px);
+}
+
+.submit-off {
+    cursor: not-allowed;
+    filter: blur(.8px);
+}
+
+.start-game {
+    cursor: pointer;
+    filter: unset;
+}
+
+footer {
+    text-align: center;
+    font: inherit;
+}

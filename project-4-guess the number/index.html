@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h2 class="top-heading">Guess the Number</h2>
+    </header>
+
+    <form class="container">
+        <p>Enter a guess between 0 to 100</p>
+        <input class="input-feild" type="number" placeholder="Enter a number" min="0" max="100" required>
+        <div class="btns">
+            <button class=" submit-btn btn ">Submit</button>
+            <button class=" start-game-btn btn " disabled>Start Game</button>
+        </div>
+    </form>
+
+    <footer>
+        <p class="result"></p>
+        <p class="all-guess"></p>
+    </footer>
+
+    <div class="sound">
+        <audio class="wrong">
+            <source src="./wrong-buzzer-6268.mp3">
+        </audio>
+        <audio autoplay play class="new1">
+            <source src="./open-new-level-143027.mp3">
+        </audio>
+        <audio class="correct">
+            <source src="./victory-voiced-165989.mp3">
+        </audio>
+    </div>
+
+</body>
+
+</html>
