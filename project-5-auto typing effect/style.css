@@ -1,0 +1,162 @@
+/* ...............................part-1.............................. */
+/*  { 
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(0, 0, 0);
+    padding: 24px 12px;
+    min-height: 100vh;
+    padding: 32px 64px;
+    
+    /* display:inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column; 
+}
+
+.typebox{
+    
+    width: 100%;
+    max-width: 1200px;
+    border: 2px solid whitesmoke;
+    padding: 16px 32px;
+    height: max-content;
+}
+h1 {
+    margin: 0;
+    color: whitesmoke;   
+    margin-bottom: 36px; 
+    max-width: 100%;
+    
+    font-size: x-large;
+   
+}
+
+.top{
+    margin-bottom: 36px;
+}
+
+.btn{
+    margin-top: 36px;
+}
+
+h3 {
+    margin: 0;
+    height: 28px;
+    color: whitesmoke; 
+}
+
+
+.span1 {
+    color: brown;
+    display: inline-flex;
+    justify-content: center;
+    
+}
+
+.span {
+    color: brown;
+    display: inline-flex;
+    justify-content: center;
+   
+    
+}
+
+.span1::after {
+    content: "";
+    height: 28px;
+    width: 3px;
+    background-color: rgb(255, 255, 255);
+    display: inline-block; 
+    margin-left: 4px;
+    
+}
+
+.span::after {
+    content: "";
+    height: 20px;
+    width: 3px;
+    background-color: rgb(255, 255, 255);
+    display: inline-block; 
+    margin-left: 4px;
+    
+
+}
+ */
+
+
+ /* ..........................................part-2........................................*/
+
+ * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(0, 0, 0);
+    padding: 32px 64px; /* Fixed padding */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.typebox {
+    width: 100%;
+    max-width: 1200px; /* Set a max-width for larger screens */
+    border: 2px solid whitesmoke;
+    padding: 32px; /* Fixed padding */
+    height: max-content;
+}
+
+h1, h3 {
+    color: whitesmoke;
+    text-align: center; /* Center text */
+     word-wrap: break-word; /*Handle long words in small devices */
+}
+
+h1 {
+    font-size: 36px; /* Fixed font size */
+    margin-bottom: 36px; /* Fixed margin */
+}
+
+h3 {
+    font-size: 24px; /* Fixed font size */
+    margin-bottom: 16px; /* Fixed margin */
+}
+
+.span, .span1 {
+    color: brown;
+}
+
+.span1::after, .span::after {
+    content: "";
+    height: 28px; /* Fixed height */
+    width: 3px;
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+    margin-left: 4px;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 16px 32px; /* Adjust padding for smaller screens */
+    }
+
+    h1 {
+        font-size: 24px; /* Smaller font size for mobile */
+    }
+
+    h3 {
+        font-size: 18px; /* Smaller font size for mobile */
+    }
+
+    .typebox {
+        padding: 16px; /* Smaller padding for mobile */
+    }
+}
+
