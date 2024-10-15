@@ -1,0 +1,256 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box;
+  color: rgb(0, 0, 0);
+  transition: color 1s ease-in;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  /* background-color: rgba(199, 95, 21, 0.147); */
+  overflow: hidden;
+  height: max-content;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 400;
+}
+
+.whole-container {
+  min-height: 100vh;
+  background-image: url(./images/day/cloudy-condtion.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* that trasntion behvoir is good */
+  color: #fff6f6;
+  position: relative;
+  transition: 1000ms;
+  opacity: 1;
+}
+
+.whole-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(222, 222, 222, 0.4); */
+}
+
+.small-container {
+  top: 0;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-direction: column;
+  padding: 32px 48px 64px 48px;
+}
+
+.small-container > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.city-name-time-date-information {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+
+.city-name-time-date-information .temp-details {
+  font-size: 88px;
+}
+
+.small {
+  font-size: xx-large;
+}
+.small .time,
+.small .date {
+  display: none;
+}
+
+/* .city-name-time-date-information .weather-icon-information img {
+   font-size: 88px; 
+}  */
+
+.icoo {
+  transform: scale(2);
+}
+
+.side-bar {
+  /* background-image: url(./images/day/cloudy-condtion.jpg); */
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: rgba(244, 240, 240, 0.129);
+  backdrop-filter: blur(12px);
+  padding-left: 32px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  overflow: hidden;
+}
+
+.side-bar form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 70px;
+  position: relative;
+  height: 55px;
+  margin-top: 16px;
+}
+
+.side-bar form input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+  /* background-color: #fff6f6; */
+  height: 50px;
+  flex-grow: 1;
+  font-size: larger;
+  /* color: rgb(50, 79, 188); */
+}
+
+/* .side-bar form input::placeholder {
+  color: rgb(50, 79, 188);
+} */
+
+.side-bar form button {
+  background-color: transparent;
+  border: none;
+}
+
+.side-bar form button img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 32px;
+  top: 12px;
+}
+
+.side-bar ul li {
+  list-style: none;
+  padding-block: 24px;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 32px;
+}
+
+.deatlis-information-in-side-bar h4 {
+  font-size: larger;
+}
+
+/* .side-bar .line {
+  margin-right: 32px;
+} */
+
+@media screen and (max-width: 890px) {
+  .city-name-time-date-information .temp-details {
+    font-size: 44px;
+  }
+
+  .whole-container {
+    position: relative;
+  }
+
+  .small {
+    font-size: smaller;
+  }
+  .small .time,
+  .small .date {
+    font-size: smaller;
+  }
+
+  .city-name-time-date-information .weather-icon-information img {
+    width: 25px;
+  }
+
+  .side-bar {
+    width: 40%;
+    height: 100%;
+    padding-left: 6px;
+  }
+
+  .side-bar form {
+    position: relative;
+    height: 55px;
+    margin-top: 16px;
+    gap: 4px;
+  }
+
+  .side-bar form input {
+    flex-grow: unset;
+    font-size: large;
+    width: 84%;
+  }
+
+  .side-bar form button img {
+    width: 35px;
+    height: 35px;
+    right: 6px;
+    top: 12px;
+  }
+
+  .side-bar ul li {
+    list-style: none;
+    padding-block: 24px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 32px;
+  }
+
+  .deatlis-information-in-side-bar h4 {
+    font-size: large;
+  }
+
+  .side-bar .line {
+    margin-right: 6px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .small-container {
+    position: sticky;
+    left: 0;
+    width: 100%;
+    height: 140px;
+    /* background-color: #fff; */
+    margin-inline: auto;
+    transform: scaleX(1) translateX(0%);
+    padding: 8px 8px;
+  }
+
+  .side-bar {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 140px);
+    top: 160px;
+  }
+
+  .side-bar ul li {
+    list-style: none;
+    padding-block: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 6px;
+  }
+}

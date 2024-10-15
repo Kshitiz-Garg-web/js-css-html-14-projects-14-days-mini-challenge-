@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Application</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="whole-container">
+      <div class="small-container">
+        <h2>The Weather</h2>
+        <!-- <h1 class="temp-details">16&#176;</h1> -->
+        <div class="city-name-time-date-information">
+          <h1 class="temp-details">&#176;</h1>
+
+          <div class="small">
+            <h2 class="city-name"></h2>
+            <div class="time"></div>
+            <div class="date"></div>
+          </div>
+          <div class="weather-icon-information">
+            <img
+              class="icoo"
+              src="./images/day/clear-constion.jpg"
+              alt="full-sun-clear-day"
+              width="60px"
+            />
+
+            <div class="condition-of-the-day"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="side-bar">
+        <form class="check-location">
+          <input
+            class="search-here"
+            type="text"
+            placeholder="Search Location..."
+          />
+          <button type="submit" class="submit-now">
+            <img src="./icons/other-icon/search.svg" alt="search-icon" />
+          </button>
+        </form>
+
+        <ul class="cities-list">
+          <li class="city">New York</li>
+          <li class="city">California</li>
+          <li class="city">Paris</li>
+          <li class="city">Tokyo</li>
+        </ul>
+        <!-- <hr class="line" /> -->
+        <ul class="deatlis-information-in-side-bar">
+          <h4>Weather Details</h4>
+          <li>
+            <div>Cloudy</div>
+            <div class="cloud"></div>
+          </li>
+          <li>
+            <div>Humidity</div>
+            <div class="humidity"></div>
+          </li>
+          <li>
+            <div>Wind</div>
+            <div class="wind">km/h</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
