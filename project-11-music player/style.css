@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #282c34; /* Dark background similar to Spotify */
+    color: white; /* Text color for contrast */
+}
+
+.music-player {
+    background-color: #3b3b3b; /* Dark grey background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 90%; /* Responsive width */
+    max-width: 400px; /* Max width */
+}
+
+.search-bar input {
+    padding: 8px;
+    width: 70%;
+    border: none;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+button {
+    padding: 10px;
+    margin: 5px;
+    background-color: #1db954; /* Spotify green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #1aa34a; /* Darker green on hover */
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+.control-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.volume-control {
+    margin-top: 10px;
+}
+
+.song-list {
+    margin-top: 20px;
+    text-align: left; /* Align text to the left for song list */
+}
+
+.song-list ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.song-list li {
+    padding: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.song-list li:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Light hover effect */
+}

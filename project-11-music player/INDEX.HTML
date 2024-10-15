@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="music-player">
+    <h1>Music Player</h1>
+
+
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search for a song..." />
+      <button id="searchBtn">Search</button>
+    </div>
+
+    <div class="controls">
+      <audio id="audioPlayer" controls></audio>
+      <div class="control-buttons">
+        <button id="playBtn">Play</button>
+        <button id="stopBtn">Stop</button>
+        <button id="replayBtn">Replay</button>
+      </div>
+
+      <div class="volume-control">
+        <button id="volDown">Volume Down</button>
+        <button id="volUp">Volume Up</button>
+      </div>
+    </div>
+
+
+    <div class="song-list">
+      <ul id="songResults"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
