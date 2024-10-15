@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  font-variant: small-caps;
+}
+
+body {
+   background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20200703/pngtree-hand-drawn-math-education-calculator-ruler-background-image_340650.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.calculator {
+  width: 80vw;
+  max-width: 300px;
+  height: 380px;
+  background-color: #00000052;
+  border-radius: 6px;
+  border-top: 1px solid rgba(255, 255, 255, 0.167);
+  border-left: 1px solid rgba(255, 255, 255, 0.167);
+  border-bottom: 1px solid rgba(255, 0, 234, 0.167);
+  border-right: 1px solid rgba(255, 0, 234, 0.167);
+  transform: scale(1.2);
+  backdrop-filter: blur(8px);
+}
+
+.display {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.display input {
+  width: 100%;
+  height: 100%;
+  text-align: right;
+  border: 1px solid rgb(0, 0, 0);
+  outline: 0;
+  padding: 0 10px;
+  border-radius: 6px;
+}
+
+.buttons {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.row {
+  height: 15%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.row button {
+  width: 20%;
+  height: 85%;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  box-shadow: 1px 1px 4px rgba(255, 255, 255, 0.225);
+  background-color: rgba(0, 0, 0, 0.356);
+  cursor: pointer;
+  /* text-align: center; */
+  vertical-align: middle;
+  
+}
+
+.row button:active {
+  box-shadow: inset 1px 1px 4px rgba(255, 255, 255, 0.225);
+  border-top: 0;
+  border-left: 0;
+  background-color: rgba(0, 0, 0, 0.715);
+  transform: scale(0.9);
+}
+
+.row button:hover {
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.dot{
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.row .btn-num{
+  background-color: rgba(0, 0, 250, 0.407);
+}
+
+.row .call{
+  background-color: rgba(255, 255, 255, 0.407);
+}
+
+.row .clear{
+  background-color: rgba(255, 0, 0, 0.407);
+}
+
+.row .equal{
+  background-color: rgba(255, 162, 0, 0.407);
+}
