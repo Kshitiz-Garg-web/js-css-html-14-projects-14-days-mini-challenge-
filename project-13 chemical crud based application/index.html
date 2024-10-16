@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chemical Supplies Details</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+   <main>
+     <div class="header">
+      <div class="left-part-header">Chemical supplies</div>
+      <div class="middle-part-header"></div>
+      <div class="right-part-header">
+        <button title="Add row" class="add-row">
+          <img src="./all-svg-icon-img/plus.svg" alt="plus" />
+        </button>
+        <button class="down-arrow" title="1st select row by click" onclick="upNdown('down');">
+          <img src="./all-svg-icon-img/arrow-down.svg" alt="down-arrow" />
+        </button>
+        <button class="up-arrow" title="1st select row by click" onclick="upNdown('up');">
+          <img src="./all-svg-icon-img/up-arrow.svg" alt="up-arrow" />
+        </button>
+        <button title="Delete-All" class="delete-all">
+          <img src="./all-svg-icon-img/delete-all.svg" alt="delete-all">
+        </button>
+        <button title="Reload" class="new-edit-btn">
+          <img src="./all-svg-icon-img/reload.svg" alt="reload" />
+        </button>
+        <button disabled title="save-btn-for-new-row" class="save-btn" class="save-btn">
+          <img src="./all-svg-icon-img/save.svg" alt="reload" />
+        </button>
+      </div>
+    </div>
+    <div class="table-box">
+      <table id="tablee">
+        <tr class="row1">
+          <th class="col col1">
+            <img src="./all-svg-icon-img/tick-icon.svg" alt="tick" />
+          </th>
+          <th class="col col2"></th>
+          <th class="col col3">Chemical name</th>
+          <th class="col col4">Vendor</th>
+          <th class="col col5">Density</th>
+          <th class="col col6">Viscosity</th>
+          <th class="col col7">Packaging</th>
+          <th class="col col8">Pack size</th>
+          <th class="col col9">Unit</th>
+          <th class="col col10">Quantity</th>
+          <th class="col col11">action</th>
+        </tr>
+
+        <div class="spac-container">
+          <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        </div>
+
+        <tr class="row2">
+          <th class="none col1 col">
+            <img src="./all-svg-icon-img/tick-icon.svg" alt="tick" />
+          </th>
+          <th class="none col2 col">Sr No</th>
+          <th class="none col3 col">Chemical name</th>
+          <th class="none col4 col " style="opacity: 1"></th>
+          <th class="col col5">g/m3</th>
+          <th class="col col6">m2/s</th>
+          <th class="none col7 col"></th>
+          <th class="none col8 col">Pack size</th>
+          <th class="none col9 col">Unit</th>
+          <th class="none col10 col">Quantity</th>
+          <th class="none col11 col">action</th>
+        </tr>
+
+        <tbody class="table-box-add-dyn"></tbody>
+      </table>
+    </div>
+    <div class="modal">
+      <div class="cross">
+        <img src="./all-svg-icon-img/cross.svg" alt="cross" />
+      </div>
+      <div class="input-box">
+        <label for="Chemical-name">Chemical Name</label>
+        <input type="text" id="Chemical-name" />
+      </div>
+
+      <div class="input-box">
+        <label for="vendor">Vendor</label>
+        <input  type="text" id="vendor" />
+      </div>
+
+      <div class="input-box">
+        <label for="Density">Density</label>
+        <input  type="text" id="Density" />
+      </div>
+
+      <div class="input-box">
+        <label for="Viscosity">Viscosity</label>
+        <input type="text" id="Viscosity" />
+      </div>
+
+      <div class="input-box">
+        <label for="Packaging">Packaging</label>
+        <input type="text" id="Packaging" />
+      </div>
+
+      <div class="input-box">
+        <label for="Pack-size">Pack size</label>
+        <input  type="text" id="Pack-size" />
+      </div>
+
+      <div class="input-box">
+        <label for="Unit">Unit</label>
+        <input type="text" id="Unit" />
+      </div>
+
+      <div class="input-box">
+        <label for="Quantity">Quantity</label>
+        <input type="text" id="Quantity" />
+      </div>
+
+      <div class="input-box">
+        <button class="update">Update</button>
+      </div>
+    </div>
+  </body>
+   </main>
+</html>
+
+
+

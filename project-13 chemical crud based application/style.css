@@ -1,0 +1,436 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+html,
+body {
+  min-height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow-x: hidden;
+  padding: 4px 4px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(228, 226, 226, 0.284);
+  scroll-behavior: smooth;
+}
+
+main {
+  background-color: white;
+  padding: 4px 4px;
+}
+
+/* header design */
+.header {
+  width: 95vw;
+  display: flex;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.left-part-header {
+  width: 35%;
+  font-size: 36px;
+  /* background-color: aqua; */
+}
+
+.middle-part-header {
+  width: 30%;
+  /* background-color: teal; */
+}
+
+.right-part-header {
+  width: 35%;
+  /* background-color: rgb(30, 252, 45); */
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 24px;
+  /* border: 1px solid #000000; */
+}
+
+.right-part-header button {
+  min-width: 30px;
+  height: 30px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  margin-bottom: 12px;
+}
+.right-part-header .add-row {
+  transform: scale(2.5);
+  margin-bottom: 0px;
+}
+
+.right-part-header .down-arrow {
+  transform: scale(1.3);
+  margin-bottom: 0px;
+}
+
+.right-part-header .up-arrow {
+  transform: scale(1.1);
+  margin-bottom: 10px;
+}
+
+.right-part-header .delete-all {
+  transform: scale(1);
+  margin-bottom: 6px;
+}
+.right-part-header .new-edit-btn {
+  transform: scale(2);
+  margin-bottom: -5px;
+}
+.right-part-header .save-btn {
+  transform: scale(1.3);
+  margin-bottom: 5px;
+}
+
+/* design for table */
+.table-box {
+  width: 95vw;
+  margin-top: 4px;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.table-box table {
+  /* background-color: aqua; */
+  width: 100%;
+  /* overflow: visible; */
+}
+
+.table-box table tr.row1 {
+  word-wrap: break-word;
+  /* overflow-wrap: break-word; */
+  text-align: justify;
+}
+
+.table-box table .vendor-border {
+  border-left: 2px solid rgba(57, 53, 53, 0.147);
+}
+
+.table-box table .row2 {
+  color: rgb(159, 148, 148);
+  /* background-color: blanchedalmond; */
+  text-align: justify;
+}
+
+.table-box table tr .none {
+  opacity: 0;
+}
+
+.table-box table tr .action {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 16px;
+}
+
+.table-box table tr .action button {
+  border: none;
+  background-color: transparent;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+/* modal design--- add row k time and about all */
+.modal {
+  background-color: rgb(216, 214, 210);
+  /* background-color: blanchedalmond; */
+  max-width: 400px;
+  width: 80%;
+  min-height: 500px;
+  position: absolute;
+  top: 17%;
+  left: 50%;
+  /* backdrop-filter: blur(10px);  */
+  transform: translateX(-50%);
+  border: 1px solid black;
+  display: none;
+}
+
+.modal.active {
+  display: block;
+}
+
+.modal .cross {
+  position: absolute;
+  left: 97%;
+  top: -2%;
+  cursor: pointer;
+}
+
+.modal .cross img {
+  background-color: blanchedalmond;
+  border-radius: 100%;
+}
+
+.modal .input-box {
+  /* background-color: aqua; */
+  display: flex;
+  justify-content: space-between;
+  margin: 16px 8px;
+}
+
+.modal .input-box label {
+  /* background-color: rgb(85, 173, 144); */
+  width: 125px;
+  font-size: 16px;
+}
+.modal .input-box input {
+  width: calc(100% - 135px);
+  height: 44px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 2px solid rgb(0, 0, 0);
+  font-size: x-large;
+}
+
+.modal .input-box button {
+  /* width:calc( 100% - 135px); */
+  max-width: 45%;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+  /* border-radius: 4px; */
+  padding: 4px 0;
+}
+
+button[disabled] {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+.modal button[disabled] {
+  cursor: not-allowed;
+  opacity: 0.4;
+  color: black;
+  border: 1px solid black;
+}
+
+/* now adjust to all colll sepratly */
+
+.delete-row td.col {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-align: start;
+}
+.delete-row:hover {
+  background-color: rgba(196, 185, 207, 0.323);
+}
+
+.col1 {
+  /* background-color: green; */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 15px;
+}
+.col2 {
+  /* background-color: red; */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 20px;
+}
+.col3 {
+  /* background-color: green; */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 150px;
+}
+.col4 {
+  /* background-color: green; */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 150px;
+}
+.col5 {
+  /* background-color: green; */
+  border: 1px solid rgb(159, 148, 148);
+  max-width: 200px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+.col6 {
+  /* background-color: red; */
+  border: 1px solid rgb(159, 148, 148);
+  max-width: 150px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+.col7 {
+  /* background-color: green; */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 150px;
+}
+.col8 {
+  word-wrap: break-word;
+  /* background-color: red; */
+  overflow-wrap: break-word;
+  max-width: 150px;
+}
+.col9 {
+  /* background-color: green; */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 150px;
+}
+.col10 {
+  border: 1px solid rgb(159, 148, 148);
+  /* background-color: red; */
+  max-width: 50px;
+  /* text-align: right; */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+.col11 {
+  /* background-color: green; */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 150px;
+}
+
+.table-box table tr th {
+  padding: 4px 4px;
+}
+
+.table-box table tr td {
+  padding: 0px 4px;
+}
+
+.row1 .col5,
+.row1 .col6,
+.row1 .col10 {
+  border: none;
+}
+.row2 .col5,
+.row2 .col6 {
+  border: none;
+}
+
+.delete-row .col5:hover,
+.delete-row .col6:hover,
+.delete-row .col10:hover {
+  border: 3px solid blueviolet;
+}
+
+.selected {
+  background-color: rgba(170, 107, 233, 0.323);
+  border: 2px solid blue;
+}
+
+@media (max-width: 768px) {
+  .table-box {
+    overflow-x: auto;
+  }
+
+  .table-box table {
+    min-width: 600px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .left-part-header {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .middle-part-header {
+    width: 0%;
+    /* background-color: teal; */
+  }
+
+  .right-part-header {
+    gap: 10px;
+    justify-content: flex-start;
+  }
+
+  .right-part-header button {
+    width: 24px;
+    height: 24px;
+  }
+
+  .right-part-header .add-row {
+    transform: scale(2.5);
+    margin-bottom: -10px;
+  }
+
+  .right-part-header .down-arrow {
+    transform: scale(1.3);
+    margin-bottom: 0px;
+  }
+
+  .right-part-header .up-arrow {
+    transform: scale(1.1);
+    margin-bottom: 6px;
+  }
+
+  .right-part-header .delete-all {
+    transform: scale(1);
+    margin-bottom: px;
+  }
+  .right-part-header .new-edit-btn {
+    transform: scale(1.8);
+    margin-bottom: -16px;
+  }
+  .right-part-header .save-btn {
+    transform: scale(1.3);
+    margin-bottom: 5px;
+  }
+
+  .modal {
+    width: 90%;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%) scale(0.8);
+    min-height: 400px;
+  }
+
+  /* in case of phone , smller scrren m n ara h to little bit adjustment for each col */
+  .col3,
+  .col4,
+  .col5,
+  .col6,
+  .col7,
+  .col8,
+  .col9,
+  .col10,
+  .col11 {
+    max-width: 80px;
+    word-wrap: break-word;
+  }
+
+  table th,
+  table td {
+    font-size: 12px;
+    padding: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Reduce font size and adjust column widths */
+  table th,
+  table td {
+    font-size: 10px;
+    padding: 4px;
+  }
+
+  /* Further reduce column width */
+  .col3,
+  .col4,
+  .col5,
+  .col6,
+  .col7,
+  .col8,
+  .col9,
+  .col10,
+  .col11 {
+    max-width: 60px;
+  }
+}
